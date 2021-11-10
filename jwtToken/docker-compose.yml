@@ -4,7 +4,7 @@ services:
     image: mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
-#      MYSQL_DATABASE: password
+#      MYSQL_DATABASE: jwt-tut
     volumes:
       - mysql-jwl:/var/lib/mysql
     ports:
