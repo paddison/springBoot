@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres-registration:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=registration
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+  maildev-registration:
+    image: maildev/maildev
+    ports:
+      - "1080:80"
+      - "1025:25"

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Login to Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #3e3e3e;
+            color:white;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <form class="form-signin" method="post" action="/login">
+        <h2 class="form-signin-heading">Please login to student site</h2>
+        <p>
+            <label for="username" class="sr-only">Username</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+        </p>
+        <p>
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+        </p>
+        <p>
+            Remember me?
+            <input type="checkbox" id="remember-me" name="remember-me" class="form-control">
+        </p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit"> Login</button>
+    </form>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="width:0; height:0; visibility:hidden">
+
+    <!-- Protanopia filter -->
+    <filter id="protanopia">
+        <feColorMatrix type="matrix" values="0.1135	0.8905	-0.0019	0	-0.0021
+		    	0.1130	0.8865	0.0002	0		0.0003
+				0.0017	-0.0017	1		0		0
+				0 		0 		0 		1 		0
+			"></feColorMatrix>
+    </filter>
+
+    <!-- Deuteranopia filter -->
+    <filter id="deuteranopia">
+        <feColorMatrix type="matrix" values="0.2936	0.7096	-0.0015	0		-0.0017
+				0.2923	0.7064	0.0006	0		0.0007
+				-0.0231	0.0232	0.9999	0		0
+				0 		0 		0 		1 		0
+			"></feColorMatrix>
+    </filter>
+
+    <!-- Tritanopia filter -->
+    <filter id="tritanopia">
+        <feColorMatrix type="matrix" values="0.95 	0.05 	0 		0 		0
+				0 		0.433	0.567	0		0
+				0		0.475	0.525	0		0
+				0		0		0		1		0
+			"></feColorMatrix>
+    </filter>
+
+</svg><style>/*
+Copyright (c) 2016 Interaktiva rum Sverige (Interactive rooms Sweden)
+
+Website: http://www.interaktivarum.se/en
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/*
+	The color filters are defined in external SVG file rgblind.svg, located in same folder as this CSS file.
+	Use this CSS file when injecting both the CSS style rules and the SVG filters into the HTML document.
+*/
+
+.protanopia{
+    filter: url('#protanopia');
+    -webkit-filter: url('#protanopia');
+    color-interpolation-filters:sRGB;
+}
+
+.deuteranopia{
+    filter: url('#deuteranopia');
+    -webkit-filter: url('#deuteranopia');
+    color-interpolation-filters:sRGB;
+}</style></body>
+</html>
