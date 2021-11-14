@@ -4,17 +4,15 @@ services:
     image: mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
-#      MYSQL_DATABASE: jwt-tut
-    volumes:
-      - mysql-jwl:/var/lib/mysql
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: jwttoken
+#    volumes:
+#      - mysql-jwl:/var/lib/mysql
     ports:
-      - "1000:1000"
+      - "3306:3306"
     restart: unless-stopped
 
-networks:
-  mysql:
-    driver: bridge
-
-volumes:
-  mysql:
-    driver: local
+#volumes:
+#  mysql-jwl:
+#    driver: local

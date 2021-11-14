@@ -1,0 +1,19 @@
+
+server:
+  error:
+    include-binding-errors: always
+    include-message: always
+
+spring:
+  datasource:
+    username: admin
+    password: password
+    url: jdbc:postgresql://localhost:5432/user_db
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true

@@ -1,0 +1,18 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: user_db
+      PGDATA: /data/postgres
+    volumes:
+      - postgres-playground:/data/postgres
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+volumes:
+  postgres-playground:
+    driver: local
