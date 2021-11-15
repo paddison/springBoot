@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>Register</title>
+    <meta lang="en">
+</head>
+<body>
+<h1>Register account</h1>
+
+<label for="email"> Email:
+    <input id="email" type="text" name="email">
+</label>
+<label for="firstname"> Firstname:
+    <input id="firstname" type="text" name="firstname">
+</label>
+    <label for="lastname"> Lastname:
+        <input id="lastname" type="text" name="lastname">
+    </label>
+    <label for="password"> Password:
+        <input id="password" type="text" name="password">
+    </label>
+
+    <button onclick="submitData()">Submit</button>
+
+<script>
+    async function submitData(){
+        const email = document.querySelector("#email").value
+        const firstname = document.querySelector("#firstname").value
+        const lastname = document.querySelector("#lastname").value
+        const password = document.querySelector("#password").value
+
+        const data = {
+            "email": email,
+            "firstname": firstname,
+            "lastname": lastname,
+            "password": password
+        }
+        console.log(data)
+
+        const result = await fetch("/register",    {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        console.log(result)
+    }
+
+</script>
+</body>

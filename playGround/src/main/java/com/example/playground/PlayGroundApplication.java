@@ -15,14 +15,4 @@ public class PlayGroundApplication {
     public static void main(String[] args) {
         SpringApplication.run(PlayGroundApplication.class, args);
     }
-
-    @Bean
-    CommandLineRunner run(){
-        return new CommandLineRunner() {
-            @Override
-            public void run(String... args) throws Exception {
-
-            }
-        };
-    }
 }
